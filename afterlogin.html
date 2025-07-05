@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page of Tiffin Tales</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Hamburger Menu Button -->
+<button id="menuButton" class="hamburger">&#9776;</button>
+
+<!-- Sliding Sidebar -->
+<div id="sidebar" class="sidebar">
+    <button id="closeSidebar" class="close-btn">&times;</button>
+         <div class="menu-options">
+               <button class="menu-btn" onclick="goToPage('profile.php')">Personal Info</button>
+                <button class="menu-btn" onclick="goToPage('currentOrders.html')">Current Orders</button>
+               <button class="menu-btn" onclick="goToPage('mealTracking.html')">Meal Tracking</button>
+                <button class="menu-btn" onclick="goToPage('orderHistory.html')">Order History</button>
+          </div>
+   
+</div>
+
+   <Header>
+      <marquee class="time-info">
+          Timings- Breakfast: 7:00 AM - 9:00 AM , Lunch: 11:00 AM - 1:00 PM , Dinner: 6:00 PM - 9:00 PM
+        </marquee>
+      <div id="Navbar">
+           <div class="nav-Title"> 
+              <div>
+                <h1 id="nav-Heading">Tiffin Tales </h1>
+              </div>
+              <div id="nav-H2">
+                Tiffin That Tastes Like Home
+              </div>
+           </div> 
+           <div Class="nav-anchors">
+              <a href="/Index.html" class="border">Home</a> 
+              <a href="AboutUs.html" class="border" >About us</a> 
+              <a href="ContactUs.html" class="border">Contact us</a> 
+              <a  href="cart.html"><Button>CART</Button></a>
+             
+              
+           </div>
+         
+        
+      </div>
+     <br>
+     <div id="banner"  >
+     
+      <img src="Banner.jpg" alt="Banner Of Tiffin Tales" height="auto"  style="border-radius: 0.5rem;" >
+     </div>
+
+    </Header>
+
+
+<main>
+  <div class="Body-Box1">
+    <div class="Meal-title"><h2>What's On Our Menu</h2></div>
+    <div id="Mealimages">
+      <div class="img-box">
+              <a class="img" href="Breakfast.html">
+                 <div><img class="meal-img img1" src="/breakfastnobg.png" alt="Breakfast Image"></div> 
+                 <div><p>Breakfast Menu</p></div>
+              </a>
+            </div>
+            <div class="img-box">
+              <a class="img" href="/LunchMenu.html">
+                <div><img class="meal-img img2" src="/nobg lunch.png" alt="Lunch Image"></div> 
+                <div><p>Lunch Menu</p></div>
+                </a>
+            </div>
+
+            <div class="img-box">
+               <a class="img" href="/DinnerMenu.html">
+                  <div><img class="meal-img img3" src="/dinnernobg.png" alt="Dinner Image"></div>
+                  <div><p>Dinner Menu</p></div>
+               </a>
+            </div>
+    </div>
+   
+  </div>         
+  <br><br><br><br>
+
+  <h2 style="background-color: #F5EBDD;">Our Meal Plans</h2>
+  <div class="Meal-Plan">
+    <div class="box-sub">
+      <div class="Box-Plan box1">
+        <div class="Plan-title"><h4>Basic Meal Plan</h4></div>
+        <div class="Plan-text">
+          <ul>
+            <li>Budget Friendly</li>
+            <li>Best For Light Eaters</li>
+            <li>Rs.70-90 per meal</li>
+          </ul>
+        </div>
+      </div>
+      <div><a href="BasicPlan.html"><button>Subscribe</button></a></div>
+    </div>
+
+    <div class="box-sub">
+      <div class="Box-Plan box2">
+        <div class="Plan-title"><h4>Standard Meal Plan</h4></div>
+        <div class="Plan-text">
+          <ul>
+            <li>Daily Balanced diet</li>
+            <li>Best for professionals and regular office goers.</li>
+            <li>Rs.100-120 per meal</li>
+          </ul>
+        </div>
+      </div>
+      <div><a href="StandardPlan.html"><button>Subscribe</button></a></div>
+    </div>
+
+    <div class="box-sub">
+      <div class="Box-Plan box3">
+        <div class="Plan-title"><h4>Premium Meal Plan</h4></div>
+        <div class="Plan-text">
+          <ul>
+            <li>Hearty and Variety Filled</li>
+            <li>For quality and variety</li>
+            <li>Rs.130-180 per meal</li>
+          </ul>
+        </div>
+      </div>
+      <div><a href="PremiumPlan.html"><button>Subscribe</button></a></div>
+    </div>
+
+    <div class="box-sub">
+      <div class="Box-Plan box4">
+        <div class="Plan-title"><h4>Customise Meal Plan</h4></div>
+        <div class="Plan-text">
+          <ul>
+            <li>Meal of your preference</li>
+            <li>Flexible price based on selection</li>
+          </ul>
+        </div>
+      </div>
+      <div><a href="CustomizedPlan.html"><button>Subscribe</button></a></div>
+    </div>
+  </div>
+  <br>
+
+  <div id="feedback-title"><h4>Customer Feedback</h4></div>
+  <div class="feedback-section">  
+    <div class="feedback-box">
+      <div class="box"><p>"Most amazing tiffin service ever had"</p></div>
+      <div class="usericon">
+        <div class="photo"></div>
+        <div class="cust-name"><p>-Mansi Meha</p></div>
+      </div>
+    </div>
+
+    <div class="feedback-box">
+      <div class="box"><p>"Amazing taste, and quality items!! Best ever!!"</p></div>
+      <div class="usericon">
+        <div class="photo"></div>
+        <div class="cust-name"><p>-Adarsh Mishra</p></div>
+      </div>
+    </div>
+
+    <div class="feedback-box">
+      <div class="box"><p>"Ghar jaisa Khana, I always order when not cooking @home."</p></div>
+      <div class="usericon">
+        <div class="photo"></div>
+        <div class="cust-name"><p>-Shivesh Mishra</p></div>
+      </div>
+    </div>
+
+    <div class="feedback-box">
+      <div class="box"><p>"Must try for students and bachelor living away from home."</p></div>
+      <div class="usericon">
+        <div class="photo"></div>
+        <div class="cust-name"><p>-Vineet Meena</p></div>
+      </div>
+    </div>
+
+    <div class="feedback-box">
+      <div class="box"><p>"This is a good service"</p></div>
+      <div class="usericon">
+        <div class="photo"></div>
+        <div class="cust-name"><p>-Avinash Mishra</p></div>
+      </div>
+    </div>
+  </div>
+
+   <div>
+        <a href="Feedback.html"><button  class="Feed-Button">Share Your Feedback</button></a>
+    </div>
+</main>
+
+<footer>
+  <div class="Footer-section">
+    <h1 id="nav-Heading">Tiffin Tales</h1>
+    <div class="Footer-box">
+      <h5>About us</h5>
+      <div class="footer-anchor">
+        <a href="Index.html">Home</a>
+        <a href="AboutUs.html">About us</a>
+        <a href="SignIn.html">SignIn</a>
+        <a href="ContactUs.html">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="Footer-box">
+      <h5>Quick Menu</h5>
+      <div class="footer-anchor">
+        <a href="Terms&Cond.html">Terms & Conditions</a>
+        <a href="PrivacyPol.html">Privacy Policy</a>
+        <a>Refund & Cancellation Policy</a>
+      </div>
+    </div>
+
+    <div class="Footer-box2">
+      <h5>Delivery Timings</h5>
+      <div id="timings">
+        <p>Breakfast : 7:00 AM - 9:00 AM</p>
+        <p>Lunch : 11:00 AM - 1:00 PM</p>
+        <p>Dinner : 6:00 PM - 9:00 PM</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menuButton').addEventListener('click', function () {
+    let sidebar = document.getElementById('sidebar');
+    sidebar.style.left = (sidebar.style.left === '0px') ? '-300px' : '0';
+  });
+
+  document.getElementById('closeSidebar').addEventListener('click', function () {
+    document.getElementById('sidebar').style.left = '-300px';
+  });
+
+  function goToPage(page) {
+    window.location.href = page;
+  }
+</script>
+</body>
+</html>

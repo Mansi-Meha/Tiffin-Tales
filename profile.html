@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<div id="Navbar">
+    <div class="nav-Title">
+        <h1 id="nav-Heading">Tiffin Tales</h1>
+        <div id="nav-H2">Tiffin That Tastes Like Home</div>
+    </div>
+    <div class="nav-anchors">
+        <a href="AboutUs.html" class="border">About us</a>
+        <a href="ContactUs.html" class="border">Contact us</a>
+        <a href="cart.html"><button>Cart</button></a>
+    </div>
+</div>
+
+<!-- Profile Section -->
+<div style="margin-top: 150px; display: flex; justify-content: center;">
+    <div style="background-color: #F5EBDD; padding: 30px; border-radius: 10px; width: 500px; box-shadow: 2px 2px 5px grey;">
+        <h2 style="text-align: center; color: #e63003; margin-bottom: 20px;">User Profile</h2>
+
+        <form method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+            <!-- Non-editable Fields -->
+            <label>Name: <span style="font-weight: bold;">[User Full Name]</span></label>
+            <label>Mobile: <span style="font-weight: bold;">[User Mobile]</span></label>
+
+            <!-- Editable Fields -->
+            <label>Email:
+                <input type="email" name="email" class="input" value="[User Email]" required>
+            </label>
+
+            <label>Gender:
+                <select name="gender" class="input" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </label>
+
+            <label>Date of Birth:
+                <input type="date" name="dob" class="input" value="[User DOB]" required>
+            </label>
+
+            <label>Address:
+                <textarea name="address" class="input" rows="3" required>[User Address]</textarea>
+            </label>
+
+            <button type="submit" class="login-submit" style="background-color: black; color: white; border-radius: 10px;">Save Changes</button>
+        </form>
+
+        <!-- Logout Button -->
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="logout.html">
+                <button style="background-color: red; color: white; padding: 10px 20px; border-radius: 5px; font-size: 16px;">
+                    Logout
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

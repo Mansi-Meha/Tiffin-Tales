@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Tiffin Tales</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .cart-section {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 100px auto 40px auto;
+        }
+
+        .cart-item {
+            border: 2px solid black;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            background-color: #f5f5f5;
+        }
+
+        .remove-button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        
+
+        p {
+            font-size: 18px;
+            margin: 8px 0;
+        }
+
+        .payment-button {
+            display: block;
+            margin: 30px auto;
+            background-color: green;
+            color: white;
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        #head{
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: 600;
+            position: relative;
+            top: 80px;
+            text-shadow: 2px 2px 2px  #e63003;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <Header>
+      <marquee class="time-info">
+          Timings- Breakfast: 7:00 AM - 9:00 AM , Lunch: 11:00 AM - 1:00 PM , Dinner: 6:00 PM - 9:00 PM
+        </marquee>
+      <div id="Navbar">
+           <div class="nav-Title"> 
+              <div>
+                <h1 id="nav-Heading">Tiffin Tales </h1>
+              </div>
+              <div id="nav-H2">
+                Tiffin That Tastes Like Home
+              </div>
+           </div> 
+           <div Class="nav-anchors">
+              <a href="afterlogin.html" class="border">Home</a> 
+              <a href="AboutUs.html" class="border" >About us</a> 
+              <a href="ContactUs.html" class="border">Contact us</a> 
+              <a  href="cart.html"><Button>CART</Button></a>
+              
+           </div>
+         
+        
+      </div>
+ </Header>
+    <!-- Cart Section -->
+    <main class="Cart-main">
+        <p id="head">Your Cart</p>
+        <div class="cart-section" id="cartItems"></div>
+        <!-- Payment Button -->
+      <div style="text-align: center; margin: 30px;">
+         <a href="payment.html">
+           <button class="payment-button">Proceed to Payment</button>
+        </a>
+       </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="Footer-section">
+            <h1 id="nav-Heading">Tiffin Tales</h1>
+
+            <div class="Footer-box">
+                <h5>About us</h5>
+                <div class="footer-anchor">
+                    <a href="/Index.html">Home</a>
+                    <a href="/AboutUs.html">About us</a>
+                    <a href="/SignIn.html">SignIn</a>
+                    <a href="/ContactUs.html">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="Footer-box">
+                <h5>Quick Menu</h5>
+                <div class="footer-anchor">
+                    <a>Terms & Conditions</a>
+                    <a>Privacy Policy</a>
+                    <a>Refund & Cancellation Policy</a>
+                </div>
+            </div>
+
+            <div class="Footer-box2">
+                <h5>Delivery Timings</h5>
+                <div id="timings">
+                    <p>Breakfast: 7:00 AM - 9:00 AM</p>
+                    <p>Lunch: 11:00 AM - 1:00 PM</p>
+                    <p>Dinner: 6:00 PM - 9:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Functionality -->
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let cartContainer = document.getElementById('cartItems');
+
+        function displayCart() {
+            cartContainer.innerHTML = '';
+
+            if (cart.length === 0) {
+                cartContainer.innerHTML = "<p style='text-align:center;'>Your cart is empty.</p>";
+                return;
+            }
+
+            cart.forEach((item, index) => {
+                let itemDiv = document.createElement('div');
+                itemDiv.className = 'cart-item';
+
+                itemDiv.innerHTML = `
+                    <h3>${item.plan}</h3>
+                    <p><strong>Meal Type:</strong> ${item.mealType}</p>
+                    <p><strong>Meal Frequency:</strong> ${item.mealTimes}</p>
+                    <p><strong>Number of Days:</strong> ${item.mealDays}</p>
+                    <button class="remove-button" onclick="removeItem(${index})">Remove</button>
+                `;
+
+                cartContainer.appendChild(itemDiv);
+            });
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+        }
+
+        displayCart();
+    </script>
+
+</body>
+
+</html>
